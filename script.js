@@ -38,3 +38,15 @@
     setTimeout(() => toast.style.display = 'none', 3000);
     setTimeout(() => window.open(url, '_blank'), 600);
   }
+
+const track = document.querySelector(".carousel-track");
+const next = document.querySelector(".next");
+const prev = document.querySelector(".prev");
+
+next.onclick = () => {
+  track.scrollBy({ left: 350, behavior: "smooth" });
+};
+
+prev.onclick = () => {
+  track.scrollBy({ left: -350, behavior: "smooth" });
+};
